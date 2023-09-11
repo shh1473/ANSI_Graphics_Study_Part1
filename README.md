@@ -1,7 +1,7 @@
-# ANSI_Graphics_Study_Part1
+# ANSI Graphics Study Part 1
 
 ## 개요
-* 본 프로젝트는 Visual Studio 2022 환경에서 C++와 OpenGL (GLFW)을 사용하여 제작된 교육용 그래픽스 엔진입니다.
+* 본 프로젝트는 Windows 11 운영체제, Visual Studio 2022 환경에서 C++와 OpenGL (GLFW)을 사용하여 제작된 교육용 그래픽스 엔진입니다.
 * ANSI는 'Analyse & Solve It'의 약자로, 이름은 아주대학교 소프트웨어학과의 A.N.S.I 소학회 명칭에서 따왔습니다.
 * 아주대학교 학생들만이 아닌 누구나 독학 또는 강의용으로 사용할 수 있습니다.
 * 본 엔진은 초급-중급 강의 수준의 기능만을 담고 있으며, [완전한 엔진](https://github.com/shh1473/ANSI_Graphics_Engine)은 개발 중에 있습니다.
@@ -15,6 +15,7 @@
 ## 사용법
 * 다운로드 받은 상태 그대로 빌드하고 실행하면 됩니다.
 * 기본 장면은 ExampleManager 장면으로, 다른 모든 예제 장면에 접근할 수 있습니다.
+* 실행만 하고싶을 경우, '실행_파일.zip' 파일을 열고 실행하면 됩니다.
 
 ## 기능 및 장면
 1. Hello World Scene: ImGui에서 "Hello, World!" 문자열을 띄우는 장면
