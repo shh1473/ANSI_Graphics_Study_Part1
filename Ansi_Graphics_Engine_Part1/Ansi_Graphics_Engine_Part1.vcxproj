@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{23383e58-1dac-4c35-b043-7d49bd1e1371}</ProjectGuid>
+    <RootNamespace>AnsiGraphicsEnginePart1</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)\bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\bin\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)\bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\bin\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)\dependencies\VLD\include;$(SolutionDir)\Ansi_Graphics_Engine_Part1\engine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)\dependencies\VLD\lib\Win64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>vld.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)\dependencies\VLD\include;$(SolutionDir)\Ansi_Graphics_Engine_Part1\engine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="engine\common\ansi_common.cpp" />
+    <ClCompile Include="engine\core\ansi_core.cpp" />
+    <ClCompile Include="engine\core\gui\ansi_gui.cpp" />
+    <ClCompile Include="engine\core\render\ansi_render.cpp" />
+    <ClCompile Include="engine\core\render\built_in\ansi_built_in.cpp" />
+    <ClCompile Include="engine\core\render\built_in\depth_material\ansi_depth_material.cpp" />
+    <ClCompile Include="engine\object\component\camera\post_effect_camera\ansi_post_effect_material.cpp" />
+    <ClCompile Include="engine\core\render\input_executor\ansi_input_executor.cpp" />
+    <ClCompile Include="engine\core\render\input_executor\input_param\ansi_input_param.cpp" />
+    <ClCompile Include="engine\core\render\output_executor\ansi_output_executor.cpp" />
+    <ClCompile Include="engine\core\render\output_executor\output_param\ansi_output_param.cpp" />
+    <ClCompile Include="engine\core\render\shader_executor\ansi_shader_executor.cpp" />
+    <ClCompile Include="engine\core\render\shader_executor\material\ansi_material.cpp" />
+    <ClCompile Include="engine\core\timer\ansi_timer.cpp" />
+    <ClCompile Include="engine\core\window\ansi_window.cpp" />
+    <ClCompile Include="engine\object\ansi_object.cpp" />
+    <ClCompile Include="engine\object\component\ansi_component.cpp" />
+    <ClCompile Include="engine\object\component\camera\ansi_camera.cpp" />
+    <ClCompile Include="engine\object\component\camera\depth_camera\ansi_depth_camera.cpp" />
+    <ClCompile Include="engine\object\component\camera\post_effect_camera\ansi_post_effect.cpp" />
+    <ClCompile Include="engine\object\component\camera\post_effect_camera\ansi_post_effect_camera.cpp" />
+    <ClCompile Include="engine\object\component\light\directional_light\ansi_directional_light.cpp" />
+    <ClCompile Include="engine\object\component\light\hs_ambient_light\ansi_hs_ambient_light.cpp" />
+    <ClCompile Include="engine\object\component\renderer\ansi_renderer.cpp" />
+    <ClCompile Include="engine\object\component\transform\ansi_transform.cpp" />
+    <ClCompile Include="engine\resource\framebuffer\ansi_framebuffer.cpp" />
+    <ClCompile Include="engine\resource\geometry\ansi_geometry.cpp" />
+    <ClCompile Include="engine\resource\shader\ansi_shader.cpp" />
+    <ClCompile Include="engine\resource\texture\ansi_texture.cpp" />
+    <ClCompile Include="engine\resource\input_elements\ansi_input_elements.cpp" />
+    <ClCompile Include="engine\scene\ansi_scene.cpp" />
+    <ClCompile Include="engine\scene\resource_storage\ansi_resource_storage.cpp" />
+    <ClCompile Include="engine\utility\event_listener\ansi_event_listener.cpp" />
+    <ClCompile Include="engine\utility\geometry_generator\box\ansi_box_geometry_generator.cpp" />
+    <ClCompile Include="engine\utility\geometry_generator\cylinder\ansi_cylinder_geometry_generator.cpp" />
+    <ClCompile Include="engine\utility\geometry_generator\plane\ansi_plane_geometry_generator.cpp" />
+    <ClCompile Include="engine\utility\geometry_generator\sphere\ansi_sphere_geometry_generator.cpp" />
+    <ClCompile Include="engine\utility\obj_loader\ansi_obj_loader.cpp" />
+    <ClCompile Include="engine\utility\orbit_controls\ansi_orbit_controls.cpp" />
+    <ClCompile Include="engine\utility\orbit_controls\spherical\ansi_spherical.cpp" />
+    <ClCompile Include="engine\utility\shader_loader\ansi_shader_loader.cpp" />
+    <ClCompile Include="engine\utility\texture_loader\ansi_texture_loader.cpp" />
+    <ClCompile Include="examples\manager\example_manager.cpp" />
+    <ClCompile Include="examples\material\all_in_one\all_in_one_material.cpp" />
+    <ClCompile Include="examples\material\cel_shading\cel_shading_material.cpp" />
+    <ClCompile Include="examples\material\color\color_material.cpp" />
+    <ClCompile Include="examples\material\directional_light\directional_light_material.cpp" />
+    <ClCompile Include="examples\material\hs_ambient_light\hs_ambient_light_material.cpp" />
+    <ClCompile Include="examples\material\texture\texture_material.cpp" />
+    <ClCompile Include="examples\scene\01_color_scene\color_scene.cpp" />
+    <ClCompile Include="examples\scene\00_hello_world_scene\hello_world_scene.cpp" />
+    <ClCompile Include="examples\scene\03_hs_ambient_light_scene\hs_ambient_light_scene.cpp" />
+    <ClCompile Include="examples\scene\04_directional_light_scene\directional_light_scene.cpp" />
+    <ClCompile Include="examples\scene\05_cel_shading_scene\cel_shading_scene.cpp" />
+    <ClCompile Include="examples\scene\08_final_scene\final_scene.cpp" />
+    <ClCompile Include="examples\scene\example_scene.cpp" />
+    <ClCompile Include="examples\material\normal_mapping\normal_mapping_material.cpp" />
+    <ClCompile Include="examples\scene\06_normal_mapping_scene\normal_mapping_scene.cpp" />
+    <ClCompile Include="examples\material\bloom\bloom_material.cpp" />
+    <ClCompile Include="examples\material\gaussian_blur\gaussian_blur_material.cpp" />
+    <ClCompile Include="examples\material\filter_matrix\filter_matrix_material.cpp" />
+    <ClCompile Include="examples\material\luminance_extraction\luminance_extraction_material.cpp" />
+    <ClCompile Include="examples\material\screen_plane\screen_plane_material.cpp" />
+    <ClCompile Include="examples\material\shadow\shadow_material.cpp" />
+    <ClCompile Include="examples\scene\07_shadow_scene\shadow_scene.cpp" />
+    <ClCompile Include="examples\scene\02_texture_scene\texture_scene.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="engine\ansi_graphics_engine.h" />
+    <ClInclude Include="engine\common\ansi_common.h" />
+    <ClInclude Include="engine\common\ansi_common_render.h" />
+    <ClInclude Include="engine\core\ansi_core.h" />
+    <ClInclude Include="engine\core\gui\ansi_gui.h" />
+    <ClInclude Include="engine\core\render\ansi_render.h" />
+    <ClInclude Include="engine\core\render\built_in\ansi_built_in.h" />
+    <ClInclude Include="engine\core\render\built_in\depth_material\ansi_depth_material.h" />
+    <ClInclude Include="engine\object\component\camera\post_effect_camera\ansi_post_effect_material.h" />
+    <ClInclude Include="engine\core\render\input_executor\ansi_input_executor.h" />
+    <ClInclude Include="engine\core\render\input_executor\input_param\ansi_input_param.h" />
+    <ClInclude Include="engine\core\render\output_executor\ansi_output_executor.h" />
+    <ClInclude Include="engine\core\render\output_executor\output_param\ansi_output_param.h" />
+    <ClInclude Include="engine\core\render\shader_executor\ansi_shader_executor.h" />
+    <ClInclude Include="engine\core\render\shader_executor\material\ansi_material.h" />
+    <ClInclude Include="engine\core\timer\ansi_timer.h" />
+    <ClInclude Include="engine\core\window\ansi_window.h" />
+    <ClInclude Include="engine\object\ansi_object.h" />
+    <ClInclude Include="engine\object\component\ansi_component.h" />
+    <ClInclude Include="engine\object\component\camera\ansi_camera.h" />
+    <ClInclude Include="engine\object\component\camera\depth_camera\ansi_depth_camera.h" />
+    <ClInclude Include="engine\object\component\camera\post_effect_camera\ansi_post_effect.h" />
+    <ClInclude Include="engine\object\component\camera\post_effect_camera\ansi_post_effect_camera.h" />
+    <ClInclude Include="engine\object\component\light\directional_light\ansi_directional_light.h" />
+    <ClInclude Include="engine\object\component\light\hs_ambient_light\ansi_hs_ambient_light.h" />
+    <ClInclude Include="engine\object\component\renderer\ansi_renderer.h" />
+    <ClInclude Include="engine\object\component\transform\ansi_transform.h" />
+    <ClInclude Include="engine\resource\framebuffer\ansi_framebuffer.h" />
+    <ClInclude Include="engine\resource\geometry\ansi_geometry.h" />
+    <ClInclude Include="engine\resource\shader\ansi_shader.h" />
+    <ClInclude Include="engine\resource\texture\ansi_texture.h" />
+    <ClInclude Include="engine\resource\input_elements\ansi_input_elements.h" />
+    <ClInclude Include="engine\scene\ansi_scene.h" />
+    <ClInclude Include="engine\scene\resource_storage\ansi_resource_storage.h" />
+    <ClInclude Include="engine\utility\event_listener\ansi_event_listener.h" />
+    <ClInclude Include="engine\utility\geometry_generator\box\ansi_box_geometry_generator.h" />
+    <ClInclude Include="engine\utility\geometry_generator\cylinder\ansi_cylinder_geometry_generator.h" />
+    <ClInclude Include="engine\utility\geometry_generator\plane\ansi_plane_geometry_generator.h" />
+    <ClInclude Include="engine\utility\geometry_generator\sphere\ansi_sphere_geometry_generator.h" />
+    <ClInclude Include="engine\utility\obj_loader\ansi_obj_loader.h" />
+    <ClInclude Include="engine\utility\orbit_controls\ansi_orbit_controls.h" />
+    <ClInclude Include="engine\utility\orbit_controls\spherical\ansi_spherical.h" />
+    <ClInclude Include="engine\utility\shader_loader\ansi_shader_loader.h" />
+    <ClInclude Include="engine\utility\state_checker\ansi_state_checker.h" />
+    <ClInclude Include="engine\utility\state_checker\ansi_state_checker_math.h" />
+    <ClInclude Include="engine\utility\texture_loader\ansi_texture_loader.h" />
+    <ClInclude Include="examples\manager\example_manager.h" />
+    <ClInclude Include="examples\material\all_in_one\all_in_one_material.h" />
+    <ClInclude Include="examples\material\cel_shading\cel_shading_material.h" />
+    <ClInclude Include="examples\material\color\color_material.h" />
+    <ClInclude Include="examples\material\directional_light\directional_light_material.h" />
+    <ClInclude Include="examples\material\hs_ambient_light\hs_ambient_light_material.h" />
+    <ClInclude Include="examples\material\texture\texture_material.h" />
+    <ClInclude Include="examples\scene\01_color_scene\color_scene.h" />
+    <ClInclude Include="examples\scene\00_hello_world_scene\hello_world_scene.h" />
+    <ClInclude Include="examples\scene\03_hs_ambient_light_scene\hs_ambient_light_scene.h" />
+    <ClInclude Include="examples\scene\04_directional_light_scene\directional_light_scene.h" />
+    <ClInclude Include="examples\scene\05_cel_shading_scene\cel_shading_scene.h" />
+    <ClInclude Include="examples\scene\08_final_scene\final_scene.h" />
+    <ClInclude Include="examples\scene\example_scene.h" />
+    <ClInclude Include="examples\material\normal_mapping\normal_mapping_material.h" />
+    <ClInclude Include="examples\scene\06_normal_mapping_scene\normal_mapping_scene.h" />
+    <ClInclude Include="examples\material\bloom\bloom_material.h" />
+    <ClInclude Include="examples\material\gaussian_blur\gaussian_blur_material.h" />
+    <ClInclude Include="examples\material\filter_matrix\filter_matrix_material.h" />
+    <ClInclude Include="examples\material\luminance_extraction\luminance_extraction_material.h" />
+    <ClInclude Include="examples\material\screen_plane\screen_plane_material.h" />
+    <ClInclude Include="examples\material\shadow\shadow_material.h" />
+    <ClInclude Include="examples\scene\07_shadow_scene\shadow_scene.h" />
+    <ClInclude Include="examples\scene\02_texture_scene\texture_scene.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\shader\all_in_one.shader" />
+    <None Include="assets\shader\bloom_effect.shader" />
+    <None Include="assets\shader\gaussian_blur.shader" />
+    <None Include="assets\shader\cel_shading.shader" />
+    <None Include="assets\shader\color.shader" />
+    <None Include="assets\shader\directional_light.shader" />
+    <None Include="assets\shader\filter_matrix.shader" />
+    <None Include="assets\shader\depth.shader" />
+    <None Include="assets\shader\hs_ambient_light.shader" />
+    <None Include="assets\shader\luminance_extraction.shader" />
+    <None Include="assets\shader\normal_mapping.shader" />
+    <None Include="assets\shader\screen_plane.shader" />
+    <None Include="assets\shader\shadow.shader" />
+    <None Include="assets\shader\texture.shader" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
